@@ -15,8 +15,9 @@ end
 
 module Herbalist
   class << self
-    attr_accessor :debug
+    attr_accessor :debug, :basic
   end
   
   self.debug = false
+  self.basic = false
 end

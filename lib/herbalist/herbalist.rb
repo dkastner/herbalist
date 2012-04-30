@@ -36,12 +36,14 @@ module Herbalist
     
     private
     def normalize(text)
-      # use Numerizer to convert any numbers in words to digets in the string
-      text = Numerizer.numerize(text)
-      puts "NUMERIZED: #{text}" if Herbalist.debug
+      unless Herbalist.basic
+        # use Numerizer to convert any numbers in words to digets in the string
+        text = Numerizer.numerize(text)
+        puts "NUMERIZED: #{text}" if Herbalist.debug
       
-      text = evaluate_fractions(text)
-      puts "FRACTIONED: #{text}" if Herbalist.debug
+        text = evaluate_fractions(text)
+        puts "FRACTIONED: #{text}" if Herbalist.debug
+      end
       
       text = normalize_multiword(text)
       puts "MULTIWORDED: #{text}" if Herbalist.debug
