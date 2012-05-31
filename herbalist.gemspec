@@ -25,9 +25,7 @@ Gem::Specification.new do |s|
      "VERSION",
      "herbalist.gemspec",
      "lib/herbalist.rb",
-     "lib/herbalist/herbalist.rb",
-     "test/test_helper.rb",
-     "test/test_herbalist.rb"
+     "lib/herbalist/herbalist.rb"
   ]
   s.homepage = %q{http://github.com/jduff/herbalist}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -35,8 +33,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{Herbalist is a natural language measurements parser.}
   s.test_files = [
-    "test/test_helper.rb",
-     "test/test_herbalist.rb"
+    "spec/helper.rb",
+    "spec/herbalist_spec.rb"
   ]
 
   s.add_runtime_dependency(%q<alchemist>, [">= 0.1.2"])
